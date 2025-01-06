@@ -87,7 +87,7 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
                         <div>
                             <h2 className="text-lg text-black font-medium mb-2">Items</h2>
                             {items.map((item, index) => (
-                                <div key={index} className="flex items-center space-x-4 mb-2">
+                                <div key={index} className="w-full justify-start flex flex-col sm:flex-row items-start space-y-2 sm:space-y-0 sm:space-x-4 mb-2">
                                     <input
                                         value={item.description}
                                         onChange={(e) => {
@@ -100,19 +100,17 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
                                     />
                                     <input
                                         type="number"
-                                        // value={item.quantity}
                                         onChange={(e) => {
                                             const newItems = [...items];
                                             newItems[index].quantity = parseInt(e.target.value);
                                             newItems[index].total = newItems[index].quantity * newItems[index].unitPrice;
                                             setItems(newItems);
                                         }}
-                                        className=" border p-2 w-24 rounded-md border-gray-300 shadow-sm"
+                                        className="border p-2 w-24 rounded-md border-gray-300 shadow-sm"
                                         placeholder="Qty"
                                     />
                                     <input
                                         type="number"
-                                        // value={item.unitPrice}
                                         onChange={(e) => {
                                             const newItems = [...items];
                                             newItems[index].unitPrice = parseFloat(e.target.value);
