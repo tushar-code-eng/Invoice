@@ -27,7 +27,7 @@ export async function GET(
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
 
-    const myAddress = "#37 New Vikas Nagar, Baltana, 140604, Punjab";
+    const myAddress = "#38 New Vikas Nagar, Baltana, 140604, Punjab";
 
     const { customerName, customerAddress, customerPhoneNumber, invoiceNumber, items, total } = invoice;
 
@@ -108,7 +108,7 @@ export async function GET(
       color: rgb(0, 0, 0),
     });
 
-    page.drawText(`Total: ₹${total.toFixed(2)}`, {
+    page.drawText(`Total: ${total.toFixed(2)}/- `, {
       x: 50,
       y: page.getHeight() - 200,
       size: 16,
