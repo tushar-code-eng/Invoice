@@ -64,6 +64,10 @@ export async function GET() {
       },
     });
 
+    if(!invoices) {
+      return NextResponse.json({ success: false, invoices: [] });
+    }
+
     return NextResponse.json({ success: true, invoices });
   } catch (error) {
     console.log('Error fetching invoices:', error);

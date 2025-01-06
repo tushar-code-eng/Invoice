@@ -13,7 +13,7 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
             const response = await axios.get('/api/invoices');
             setInvoices(response.data.invoices);
         } catch (error) {
-            console.error('Failed to fetch invoices', error);
+            console.log('Failed to fetch invoices', error);
         }
     };
 
@@ -35,8 +35,8 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
                 await response.json();
                 reset();
                 setItems([]);
-                fetchInvoices()
                 alert('Invoice created successfully!');
+                fetchInvoices()
             }
         } catch (err) {
             console.log(err)
