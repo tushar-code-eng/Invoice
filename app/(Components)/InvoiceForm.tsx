@@ -100,7 +100,7 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
                                     />
                                     <input
                                         type="number"
-                                        value={item.quantity}
+                                        // value={item.quantity}
                                         onChange={(e) => {
                                             const newItems = [...items];
                                             newItems[index].quantity = parseInt(e.target.value);
@@ -112,7 +112,7 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
                                     />
                                     <input
                                         type="number"
-                                        value={item.unitPrice}
+                                        // value={item.unitPrice}
                                         onChange={(e) => {
                                             const newItems = [...items];
                                             newItems[index].unitPrice = parseFloat(e.target.value);

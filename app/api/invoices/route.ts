@@ -66,7 +66,7 @@ export async function GET() {
 
     return NextResponse.json({ success: true, invoices });
   } catch (error) {
-    console.error('Error fetching invoices:', error);
+    console.log('Error fetching invoices:', error);
     return NextResponse.json(
       { error: 'Failed to fetch invoices' },
       { status: 500 }
