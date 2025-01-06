@@ -108,7 +108,7 @@ export async function GET(
       color: rgb(0, 0, 0),
     });
 
-    page.drawText(`Total: $${total.toFixed(2)}`, {
+    page.drawText(`Total: ₹${total.toFixed(2)}`, {
       x: 50,
       y: page.getHeight() - 200,
       size: 16,
