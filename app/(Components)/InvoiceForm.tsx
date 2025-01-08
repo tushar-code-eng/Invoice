@@ -32,10 +32,13 @@ export default function InvoiceForm({ setInvoices }: { setInvoices: (invoices: a
             });
 
             if (response.ok) {
-                await response.json();
+                const data = await response.json();
                 reset();
                 setItems([]);
-                alert('Invoice created successfully!');
+                console.log(data)
+                window.open(`/api/invoices/${data.invoiceId}`, '_blank')
+                // alert('Invoice created successfully!');
+
                 fetchInvoices()
             }
         } catch (err) {

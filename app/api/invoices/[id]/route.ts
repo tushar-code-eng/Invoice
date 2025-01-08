@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/app/lib/prisma';
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-// import imgLogo from '@/public/imgaaka.jpg'
+
+
 
 export async function GET(
   request: NextRequest,
@@ -132,6 +133,8 @@ export async function GET(
     /////////////////////////////////////////////////////////////////////////////////////////
 
     const pdfBytes = await pdfDoc.save();
+
+    
 
     return new NextResponse(pdfBytes, {
       headers: {
